@@ -10,8 +10,12 @@ using TheMazeGame_Remarstered.MMXXV_.Classes.WorldObjects;
 
 namespace TheMazeGame_Remarstered.MMXXV_.Classes.Display
 {
+
+	
 	internal class Display
 	{
+		
+
 		private Canvas Window;
 
 		public static Canvas Show(World gameWorld)
@@ -59,9 +63,14 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Display
 		public static Canvas Render(World gameWorld)
 		{
 			Canvas newCanvas = new Canvas();
-
-			newCanvas.Background = Brushes.Black;
 			
+			//Background
+			newCanvas.Background = Brushes.DarkSlateGray;
+
+			//Map
+			newCanvas = gameWorld.RenderMap(newCanvas);
+
+			//Player
 			newCanvas = gameWorld.player.RenderRectangle(newCanvas);
 
 			return newCanvas;
@@ -70,26 +79,5 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Display
 	}
 }
 
-
-////private void RenderPlayer(Canvas display)
-////{
-////	Rectangle ship = new Rectangle
-////	{
-////		Height = player.Height,
-////		Width = player.Width,
-////		Fill = Brushes.Aqua
-////	};
-
-////	display.Children.Add(ship);
-
-////	Canvas.SetLeft(ship, player.Left);
-////	Canvas.SetTop(ship, player.Top);
-
-
-////	//Rotation.CenterX = ship.Width / 2;
-////	//Rotation.CenterY = ship.Height;
-////	ship.RenderTransform = player.Rotation;
-
-////}
 
 

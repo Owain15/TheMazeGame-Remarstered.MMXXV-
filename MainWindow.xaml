@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMazeGame_Remarstered.MMXXV_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" WindowState="Maximized" WindowStyle="None" WindowStartupLocation="CenterScreen" ScrollViewer.VerticalScrollBarVisibility="Disabled" ResizeMode="NoResize" Width="804">
+        Title="MainWindow" Height="450" WindowState="Maximized" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ScrollViewer.VerticalScrollBarVisibility="Disabled" ResizeMode="NoResize" Width="804">
+
     <Grid Cursor="No">
-    
-      
+
 
     </Grid>
 </Window>

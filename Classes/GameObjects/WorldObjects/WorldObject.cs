@@ -13,20 +13,21 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.WorldObjects
 	internal class WorldObject
 	{
 
-		public (int X, int Y) Size;
-		public (int X, int Y) Location;
+		public (double X, double Y) Size;
+		public (double X, double Y) Location;
 
-		public int Angle;
+		public double Angle = 0;
 
 		public RotateTransform ObjectRotation = new RotateTransform();
 		public ImageBrush ObjectImage = new ImageBrush();
+		
 
+		public (double Lateral, double Rotationl) Velocity = (0,0);
+		
+		public int Mass = 0;
 
-		public (int X, int Y) Velocity;
-		public int Mass;
-
-		public bool PhisicsOn;
-		public bool isVisable;
+		public bool PhisicsOn = true;
+		public bool isVisable = true;
 
 		public Canvas RenderRectangle(Canvas gameWindow)
 		{

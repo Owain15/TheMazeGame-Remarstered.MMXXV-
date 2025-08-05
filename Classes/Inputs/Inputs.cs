@@ -9,6 +9,8 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Inputs
 {
 	internal  class Inputs
 	{
+		bool Esc;
+
 		bool Up;
 		bool Down;
 		bool Left;
@@ -16,6 +18,8 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Inputs
 
 		public Inputs()
 		{
+			Esc = false;
+
 			Up = false;
 			Down = false;
 			Left = false;
@@ -24,6 +28,8 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Inputs
 
 		public void UpdateAllInputStates()
 		{
+			Esc = Keyboard.IsKeyDown(Key.Escape);
+
 			Up = Keyboard.IsKeyDown(Key.Up);
 			Down = Keyboard.IsKeyDown(Key.Down);
 			Left = Keyboard.IsKeyDown(Key.Left);
@@ -36,6 +42,9 @@ namespace TheMazeGame_Remarstered.MMXXV_.Classes.Inputs
 		{
 			return (Up || Down || Left || Right) == true;
 		}
+
+		public bool EscState()
+		{ return Esc; }
 
 		public bool UpState()
 		{ return Up; }

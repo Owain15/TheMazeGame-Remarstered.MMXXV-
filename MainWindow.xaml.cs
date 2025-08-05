@@ -20,11 +20,12 @@ namespace TheMazeGame_Remarstered.MMXXV_
     public partial class MainWindow : Window
     {
 
-        int refreshRate = 20;
+        int refreshRate = 50;
 		DispatcherTimer gameClock = new DispatcherTimer();
 
 
 		World gameWorld;
+        
         TheMazeGame_Remarstered.MMXXV_.Classes.Inputs.Inputs inputStates = new Classes.Inputs.Inputs();
 
         public MainWindow()
@@ -42,8 +43,9 @@ namespace TheMazeGame_Remarstered.MMXXV_
 			//Display userWindow = new Display();
 			gameWorld = new World();
 
+			
 
-            gameClock.Start();
+			gameClock.Start();
         
         }
 
@@ -55,10 +57,13 @@ namespace TheMazeGame_Remarstered.MMXXV_
             //UpdateGameState
             gameWorld.UpdateGameState(inputStates);
 
+           
             //GetCanvas
             //mainWindow.Content = Display.Show(gameWorld);
-            mainWindow.Content = Display.Render(gameWorld);
-        }
+            mainWindow.Content = Display.Render(gameWorld); 
+           
+           
+		}
 
 
 	}
